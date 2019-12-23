@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image Rotator using Html and CSS 3</title>
+  </head>
+  <style>
+    body {
+      background-image: url("https://i.picsum.photos/id/1019/5472/3648.jpg");
+      background-size: cover;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .hi-slide {
+      position: realtive;
+      width: 754px;
+      height: 292px;
+      border-radius: 50px;
+      margin: 115px auto 0;
+    }
+    .hi-slide .hi-prev,
+    .hi-slide .hi-next {
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+      border-radius: 50px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      transition: all 0.7s;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .hi-slide .hi-prev:hover,
+    .hi-slide .hi-next:hover {
+      opacity: 1;
+      background-color: white;
+    }
+    .hi-slide .hi-prev {
+      left: 59px;
+    }
+    .hi-slide .hi-prev::before {
+      content: "<";
+    }
+    .hi-slide .hi-next {
+      right: 59px;
+    }
+    .hi-slide .hi-next::before {
+      content: "> ";
+    }
+    .hi-slide > ul {
+      list-style: none;
+      position: relative;
+      width: 754px;
+      height: 292px;
+      margin: 0;
+      padding: 0;
+    }
+    .hi-slide > ul > li {
+      position: absolute;
+      overflow: hidden;
+      z-index: 0;
+      left: 377px;
+      top: 147px;
+      width: 0;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 3px solid white;
+      cursor: pointer;
+      background-color: #333;
+    }
+    .hi-slide > ul > li > img {
+      background-position: center;
+    }
+  </style>
+  <body>
+    <div class="slide hi-slide">
+      <div class="hi-prev"></div>
+      <div class="hi-next"></div>
+      <br /><br /><br /><br /><br />
+      <ul>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1000/5626/3635.jpg"
+            alt="image-1"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/100/2500/1656.jpg"
+            alt="image-2"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1003/1181/1772.jpg"
+            alt="image-3"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1008/5616/3744.jpg"
+            alt="image-4"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1011/5472/3648.jpg"
+            alt="image-5"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1016/3844/2563.jpg"
+            alt="image-6"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1015/6000/4000.jpg"
+            alt="image-7"
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.picsum.photos/id/1014/6016/4000.jpg"
+            alt="image-8"
+          />
+        </li>
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/jquery.hislide.js"></script>
+    <script>
+      $(".slide").hiSlide();
+    </script>
+  </body>
+</html>
