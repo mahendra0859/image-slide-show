@@ -6,3 +6,5 @@
 * Library Link : https://www.jquery-az.com/2-demos-of-jquery-image-rotatorslider-jquery-hislide/
 
 ![](https://media.giphy.com/media/iHsWDVf8bR0xtZUuTB/giphy.gif)
+
+* Demo Link: https://mahendra0859.github.io/image-slide-show/
